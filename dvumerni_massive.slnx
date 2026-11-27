@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="dvumerni_massive/dvumerni_massive.vcxproj" Id="1bcb5c2b-e0d9-41d0-a41c-18f34ca22846" />
+</Solution>
