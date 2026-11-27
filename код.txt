@@ -1,0 +1,388 @@
+#include <iostream>
+#include <Windows.h>
+
+using namespace std;
+ 
+struct Ship
+{
+	int length = 2;
+	bool isHorizontal = true;
+	int row = 4;
+	int col = 4;
+};
+struct ship2
+{
+	int length = 3;
+	bool isHorizontal = false;
+	int row = 4;
+	int col = 2;
+};
+
+struct ship3
+{
+	int length = 1;
+	bool isHorizontal = true;
+	int row = 6;
+	int col = 4;
+};
+
+struct ship4
+{
+	int length = 4;
+	bool isHorizontal = true;
+	int row = 2 ;
+	int col = 2 ;
+};
+
+struct ship5
+{
+
+		int length = 3;
+		bool isHorizontal = true;
+		int row = 2;
+		int col = 7;
+};
+
+struct ship6
+{
+	int length = 2;
+	bool isHorizontal = false;
+	int row = 4;
+	int col = 8;
+};
+
+struct ship7
+{
+	int length = 2;
+	bool isHorizontal = true;
+	int row = 8;
+	int col = 2;
+};
+
+struct ship8
+{
+
+	int length = 1;
+	bool isHorizontal = true;
+	int row = 6;
+	int col = 6;
+};
+
+struct ship9
+{
+
+	int length = 1;
+	bool isHorizontal = true;
+	int row = 8;
+	int col = 6;
+};
+
+struct ship10
+{
+
+	int length = 1;
+	bool isHorizontal = true;
+	int row = 10;
+	int col = 9;
+};
+
+const int SIZE = 12;
+char arry[SIZE][SIZE];
+char vrag_arry[SIZE][SIZE];
+
+void moe_pole()
+{
+	
+	 
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int i1 = 0; i1 < SIZE; i1++)
+		{
+			if (i == 0 || i1 == 0 || i == SIZE - 1 || i1 == SIZE - 1)
+			{
+				arry[i][i1] = '#';
+			}
+			else
+			{
+				arry[i][i1] = '.';
+			}
+
+		}
+	}
+
+	Ship korabl;
+	for (int k = 0; k < korabl.length; k++)
+	{
+		if (korabl.isHorizontal == true)
+		{
+			arry[korabl.row][korabl.col + k] = '*';
+		}
+		else
+		{
+			arry[korabl.row + k][korabl.col] = '*';
+		}
+	}
+
+	ship2 korablik;
+	for (int k1 = 0; k1 < korablik.length; k1++)
+	{
+		if (korablik.isHorizontal == true)
+		{
+			arry[korablik.row][korablik.col + k1] = '*';
+		}
+		else
+		{
+			arry[korablik.row + k1][korablik.col] = '*';
+		}
+	}
+
+	ship3 korablishe;
+	for (int k2 = 0; k2 < korablishe.length; k2++)
+	{
+		if (korablishe.isHorizontal == true)
+		{
+			arry[korablishe.row][korablishe.col + k2] = '*';
+		}
+		else
+		{
+			arry[korablishe.row + k2][korablishe.col] = '*';
+		}
+	}
+
+	ship4 k;
+	for (int k3 = 0; k3 < k.length; k3++)
+	{
+		if (k.isHorizontal == true)
+		{
+			arry[k.row][k.col + k3] = '*';
+		}
+		else
+		{
+			arry[k.row + k3][k.col] = '*';
+		}
+	}
+
+	ship5 ko;
+	for (int k4 = 0; k4 < ko.length; k4++)
+	{
+		if (ko.isHorizontal == true)
+		{
+			arry[ko.row][ko.col + k4] = '*';
+		}
+		else
+		{
+			arry[ko.row + k4][ko.col] = '*';
+		}
+	}
+
+	ship6 kor;
+	for (int k5 = 0; k5 < kor.length; k5++)
+	{
+		if (kor.isHorizontal == true)
+		{
+			arry[kor.row][kor.col + k5] = '*';
+		}
+		else
+		{
+			arry[kor.row + k5][kor.col] = '*';
+		}
+	}
+
+	ship7 kora;
+	for (int k6 = 0; k6 < kora.length; k6++)
+	{
+		if (kora.isHorizontal == true)
+		{
+			arry[kora.row][kora.col + k6] = '*';
+		}
+		else
+		{
+			arry[kora.row + k6][kora.col] = '*';
+		}
+	}
+
+	ship8 korab;
+	for (int k7 = 0; k7 < korab.length; k7++)
+	{
+		if (korab.isHorizontal == true)
+		{
+			arry[korab.row][korab.col + k7] = '*';
+		}
+		else
+		{
+			arry[korab.row + k7][korab.col] = '*';
+		}
+	}
+
+	ship9 korb;
+	for (int k7 = 0; k7 < korb.length; k7++)
+	{
+		if (korb.isHorizontal == true)
+		{
+			arry[korb.row][korb.col + k7] = '*';
+		}
+		else
+		{
+			arry[korb.row + k7][korb.col] = '*';
+		}
+	}
+
+	ship10 korbl;
+	for (int k6 = 0; k6 < korbl.length; k6++)
+	{
+		if (korbl.isHorizontal == true)
+		{
+			arry[korbl.row][korbl.col + k6] = '*';
+		}
+		else
+		{
+			arry[korbl.row + k6][korbl.col] = '*';
+		}
+	}
+}
+
+void vistel()
+{
+	char bukva;
+	int vistrel;
+	int x;
+	int y;
+	const int SIZE = 12;
+	char arry[SIZE][SIZE];
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int i1 = 0; i1 < SIZE; i1++)
+		{
+			if (i == 0 || i1 == 0 || i == SIZE - 1 || i1 == SIZE - 1)
+			{
+				arry[i][i1] = '#';
+			}
+			else
+			{
+				arry[i][i1] = '.';
+			}
+
+		}
+	}
+	while (1)
+	{
+		printf("куда стрелять по горизонтали? буква от а до к \n");
+		scanf_s(" %c", &bukva, 1);
+		switch (bukva)
+		{
+
+		case 'А':
+		case 'а':
+			y = 1;
+			break;
+		case 'Б':
+		case 'б':
+			y = 2;
+			break;
+		case 'В':
+		case 'в':
+			y = 3;
+			break;
+		case 'Г':
+		case 'г':
+			y = 4;
+			break;
+		case 'Д':
+		case 'д':
+			y = 5;
+			break;
+		case 'Е':
+		case 'е':
+			y = 6;
+			break;
+		case 'Ж':
+		case 'ж':
+			y = 7;
+			break;
+		case 'З':
+		case 'з':
+			y = 8;
+			break;
+		case 'И':
+		case 'и':
+			y = 9;
+			break;
+		case 'К':
+		case 'к':
+			y = 10;
+			break;
+		default:
+			y = 0;
+			break;
+		}
+		printf("куда стрелять? по вертикали от 1 до 10 \n");
+		scanf_s(" %d", &x);
+		printf("попал? да - 1\n");
+			scanf_s(" %d", &vistrel);
+
+			if (vistrel == 1)
+			{
+				arry[x][y] = '*';
+		    }
+			else
+			{
+				arry[x][y] = '+';
+			}
+		printf("      А  Б  В  Г  Д  Е  Ж  З  И  К\n");
+		for (int i = 0; i < SIZE; i++)
+		{
+			if (i > 0 & i < SIZE - 1)
+			{
+				printf("%2d", i);
+			}
+			else
+			{
+				printf("  ");
+			}
+			for (int i1 = 0; i1 < SIZE; i1++)
+			{
+				printf(" %c ", arry[i][i1]);
+			}
+			printf("\n");
+		}
+		printf("\n");
+	}
+}
+
+void vivod()
+{
+	printf("      А  Б  В  Г  Д  Е  Ж  З  И  К\n");
+	for (int i = 0; i < SIZE; i++)
+	{
+		if (i > 0 & i < SIZE - 1)
+		{
+			printf("%2d", i);
+		}
+		else
+		{
+			printf("  ");
+		}
+		for (int i1 = 0; i1 < SIZE; i1++)
+		{
+
+			printf(" %c ", arry[i][i1]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+}
+
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	printf("=== *********** ===\n=== МОРСКОЙ БОЙ ===\n=== *********** === \n \n");
+	moe_pole();
+	printf("\n");
+	printf("\n");
+	vistel();
+
+	return 0;
+}
